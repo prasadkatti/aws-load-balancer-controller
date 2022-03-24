@@ -335,9 +335,7 @@ follow below steps if you want to use kube2iam to provide the AWS credentials
     arn:aws:iam:::XXXXXXXXXXXX:role/k8s-lb-controller
     ```
 
-1.  update the alb-load-balancer-controller deployment
-
-    Add the annotations in the template's metadata point
+1.  Update the alb-load-balancer-controller deployment. Add the `iam.amazonaws.com/role` annotation as shown in the example below.
 
     ```yaml
     spec:
